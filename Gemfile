@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-# Ruby 2.7.4 https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-7-4-released/
-ruby '2.7.4'
+# Ruby 2.7.6 https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-7-4-released/
+ruby '2.7.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7.0.4'
