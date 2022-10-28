@@ -13,7 +13,7 @@ require 'rails_helper'
     expect(page).to have_field('author[homepage]')
    end
    
-   it "save the the submited form" do
+   it "save the the submitted form" do
     visit new_author_path
     page.fill_in 'author[first_name]', with: 'Edsger'
     page.fill_in 'author[last_name]', with: 'Dijkstra'

@@ -1,15 +1,7 @@
 class Author < ApplicationRecord
-    attr_accessor :first_name, :last_name, :homepage
+    validates :last_name, presence: true
     
     def name
         return first_name + ' ' + last_name
     end
-
-
-    # def initialize(first_name, last_name, homepage)
-    #     @first_name = first_name
-    #     @last_name = last_name
-    #     @homepage = homepage
-    # end
-
 end
