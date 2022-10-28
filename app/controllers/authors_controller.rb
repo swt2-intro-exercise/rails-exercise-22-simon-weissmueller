@@ -1,13 +1,20 @@
 class AuthorsController < ApplicationController
+    
+    def show
+        #rails passes all @ instance var to the view
+        @author = Author.find(params[:id])
+    end
+
     def new
     end
 
     def create
-        puts(params[:author])
         @author = Author.new(params.require(:author).permit(:first_name, :last_name, :homepage))
         @author.save
-        redirect_to root_path, notice: 'Success!'
+        redirect_to @author
     end
+
+
 
 
 
