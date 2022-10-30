@@ -7,5 +7,7 @@ describe 'Author page', type: :feature do
         @alan.save
         visit author_path(@alan)
         expect(page).to have_text("Alan")
+        expect(page).to have_text("Turing")
+        expect(page).to have_text("http://wikipedia.org/Alan_Turing")
     end
 end
