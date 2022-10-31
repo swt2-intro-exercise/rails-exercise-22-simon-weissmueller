@@ -6,6 +6,6 @@ describe "New Author Page", type: :feature do
         page.fill_in 'author[last_name]', with: ''
         page.fill_in 'author[homepage]', with: 'https://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
         find('input[type="submit"]').click
-        expect(page.status_code).to eq('404')
+        expect(page).to have_selector('div#error_explanation')
     end
 end
