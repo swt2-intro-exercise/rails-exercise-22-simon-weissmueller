@@ -21,7 +21,10 @@ class AuthorsController < ApplicationController
             render 'new'
         end
     end
-    
+
+    def edit
+        @author = Author.find(params[:id])
+    end
     private
         def article_params
             params.require(:author).permit(:first_name, :last_name, :homepage)
