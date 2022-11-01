@@ -25,7 +25,7 @@ describe "Edit Author page", type: :feature do
         page.fill_in 'author[first_name]', with: 'Edsger'
         page.fill_in 'author[last_name]', with: 'Dijkstra'
         page.fill_in 'author[homepage]', with: 'https://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
-        find('input[type="edit"]').click
+        find('input[type="submit"]').click
         @author.reload
         expect(@author.last_name).to eq('Dijkstra')
         
