@@ -1,0 +1,3062 @@
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-24 17:22:13.845802"], ["updated_at", "2022-10-24 17:22:13.845802"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-10-24 19:22:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 537.4ms | Allocations: 93792)
+Completed 200 OK in 563ms (Views: 544.0ms | ActiveRecord: 0.0ms | Allocations: 99835)
+
+
+Started GET "/" for ::1 at 2022-10-24 19:27:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 541)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 25549)
+Completed 200 OK in 102ms (Views: 82.2ms | ActiveRecord: 0.0ms | Allocations: 30388)
+
+
+Started GET "/" for ::1 at 2022-10-24 19:29:46 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2750)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3658)
+
+
+Started GET "/" for ::1 at 2022-10-25 09:56:03 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 2754)
+Completed 200 OK in 46ms (Views: 42.6ms | Allocations: 3659)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 13:41:33 +0200
+  
+ActionController::RoutingError (uninitialized constant AuthorController):
+  
+Started GET "/rails/info/routes?path=" for ::1 at 2022-10-25 13:41:58 +0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>""}
+Completed 200 OK in 5ms (Views: 0.6ms | Allocations: 2784)
+
+
+Started GET "/rails/info/routes?path=%20bra" for ::1 at 2022-10-25 13:41:59 +0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>" bra"}
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 720)
+
+
+Started GET "/rails/info/routes?path=%20bra" for ::1 at 2022-10-25 13:42:01 +0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>" bra"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 716)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 13:45:01 +0200
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for AuthorController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/author/new" for ::1 at 2022-10-25 13:52:33 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2721)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 3629)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 13:56:26 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 34.1ms | Allocations: 8668)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 11120)
+Completed 200 OK in 42ms (Views: 40.3ms | Allocations: 12021)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:01:19 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started POST "/author/new" for ::1 at 2022-10-25 14:01:39 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started POST "/author/new" for ::1 at 2022-10-25 14:02:19 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started POST "/author/new" for ::1 at 2022-10-25 14:02:36 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started GET "/author" for ::1 at 2022-10-25 14:04:15 +0200
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AuthorController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/author/new" for ::1 at 2022-10-25 14:04:21 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1473)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1540)
+Completed 500 Internal Server Error in 8ms (Allocations: 2383)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:00 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1301)
+Completed 500 Internal Server Error in 3ms (Allocations: 1519)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:01 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1303)
+Completed 500 Internal Server Error in 3ms (Allocations: 1522)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:12 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3918)
+Completed 200 OK in 19ms (Views: 17.7ms | Allocations: 4819)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:13 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3032)
+Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 3274)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:14 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 784)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3019)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 3260)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:06:15 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:20 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3041)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3282)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:33 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1537)
+Completed 500 Internal Server Error in 7ms (Allocations: 2414)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:06:34 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1301)
+Completed 500 Internal Server Error in 3ms (Allocations: 1519)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:00 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1253)
+Completed 500 Internal Server Error in 4ms (Allocations: 1855)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:01 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1301)
+Completed 500 Internal Server Error in 3ms (Allocations: 1518)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:01 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1232)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1299)
+Completed 500 Internal Server Error in 2ms (Allocations: 1516)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:41 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1537)
+Completed 500 Internal Server Error in 8ms (Allocations: 2414)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_path):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_url, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:42 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1301)
+Completed 500 Internal Server Error in 3ms (Allocations: 1519)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_path):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_url, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:42 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1301)
+Completed 500 Internal Server Error in 3ms (Allocations: 1518)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_path):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_url, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:08:43 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1232)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1299)
+Completed 500 Internal Server Error in 3ms (Allocations: 1516)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"author"}, missing required keys: [:id]
+Did you mean?  author_path):
+    1: <h1>New Author</h1>
+    2: 
+    3: <%= form_with scope: :author, url: author_url, local: true do |form| %>
+    4:     <p>
+    5:       <%= form.label :title %><br>
+    6:       <%= form.text_field :title %>
+  
+app/views/author/new.html.erb:3
+Started GET "/author/new" for ::1 at 2022-10-25 14:09:18 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3449)
+Completed 200 OK in 13ms (Views: 11.6ms | Allocations: 4350)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:09:19 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 754)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2989)
+Completed 200 OK in 7ms (Views: 6.7ms | Allocations: 3231)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:09:20 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:12:34 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3440)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 4341)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:12:36 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2991)
+Completed 200 OK in 7ms (Views: 6.9ms | Allocations: 3233)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:12:36 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2971)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 3212)
+
+
+Started GET "/author/new" for ::1 at 2022-10-25 14:12:36 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2978)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 3219)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:12:37 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started POST "/author/new" for ::1 at 2022-10-25 14:12:40 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:14:03 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3002)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 3628)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:05 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"", "text"=>""}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 535)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:09 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 350)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:10 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:10 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 340)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:10 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 346)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:10 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:10 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 346)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 340)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 334)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 342)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 348)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:11 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 354)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:12 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:12 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 352)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:12 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 340)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:12 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 352)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:14 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 356)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:14 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 352)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:15 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 340)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:15 +0200
+Processing by AuthorController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadf", "text"=>"sdfa"}, "commit"=>"Save Author"}
+No template found for AuthorController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 346)
+
+
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:23 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started POST "/author/new" for ::1 at 2022-10-25 14:14:23 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:18:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:19:05 +0200
+  
+Zeitwerk::NameError (expected file /Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/author_controller.rb to define constant AuthorController, but didn't):
+  
+zeitwerk (2.6.1) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.1) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/author/new" for ::1 at 2022-10-25 14:19:06 +0200
+  
+ActionController::RoutingError (uninitialized constant AuthorController
+Did you mean?  AuthorsController):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:19:07 +0200
+  
+ActionController::RoutingError (uninitialized constant AuthorController
+Did you mean?  AuthorsController):
+  
+Started GET "/author/new" for ::1 at 2022-10-25 14:19:22 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 750)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3013)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 3639)
+
+
+Started GET "/author/new" for ::1 at 2022-10-26 13:35:13 +0200
+Processing by AuthorController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering author/new.html.erb within layouts/application
+  Rendered author/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 3455)
+Completed 200 OK in 68ms (Views: 64.4ms | Allocations: 4357)
+
+
+Started GET "/author/new" for ::1 at 2022-10-26 13:46:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/authors/new" for ::1 at 2022-10-26 13:46:20 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1542)
+Completed 500 Internal Server Error in 7ms (Allocations: 2380)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"authors"}, missing required keys: [:id]
+Did you mean?  author_url):
+    1: <h1>New Author</h1>
+    2: 
+    3: #url: funktioniert anders als in der Dokumentation angegeben. Die Route wird nicht wie gewünscht erstellt
+    4: <%= form_with scope: :author, url: author_path, local: true do |form| %>
+    5:     <p>
+    6:       <%= form.label :title %><br>
+    7:       <%= form.text_field :title %>
+  
+app/views/authors/new.html.erb:4
+Started GET "/authors/new" for ::1 at 2022-10-26 13:46:42 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1515)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3986)
+Completed 200 OK in 15ms (Views: 13.7ms | Allocations: 4887)
+
+
+Started POST "/authors/new" for ::1 at 2022-10-26 13:46:45 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/authors/new"):
+  
+Started GET "/authors/new" for ::1 at 2022-10-26 13:47:44 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1176)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1244)
+Completed 500 Internal Server Error in 4ms (Allocations: 2122)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>New Author</h1>
+
+#url: funktioniert anders als in der Dokumentation angegeben. Die Route wird nicht wie gewünscht erstellt
+<%= form_with scope: :author, url: authors_path local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+   
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+):
+1:    <h1>New Author</h1>
+2:    
+3:    #url: funktioniert anders als in der Dokumentation angegeben. Die Route wird nicht wie gewünscht erstellt
+4:    <%= form_with scope: :author, url: authors_path local: true do |form| %>
+5:        <p>
+6:          <%= form.label :title %><br>
+7:          <%= form.text_field :title %>
+8:        </p>
+9:       
+10:        <p>
+11:          <%= form.label :text %><br>
+12:          <%= form.text_area :text %>
+13:        </p>
+14:       
+15:        <p>
+16:          <%= form.submit %>
+17:        </p>
+18:      <% end %>
+  
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+app/views/authors/new.html.erb:4: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/views/authors/new.html.erb:20: syntax error, unexpected `end', expecting end-of-input
+Started GET "/authors/new" for ::1 at 2022-10-26 13:48:08 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3468)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4369)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:09 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"", "text"=>""}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 524)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:11 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"", "text"=>""}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:11 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"", "text"=>""}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:14 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadfsad", "text"=>"sdaf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:14 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadfsad", "text"=>"sdaf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:48:14 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sadfsad", "text"=>"sdaf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:37 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2993)
+Completed 200 OK in 5ms (Views: 4.3ms | Allocations: 3235)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:37 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2978)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 3219)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:38 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2980)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 3221)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:38 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2980)
+Completed 200 OK in 6ms (Views: 6.0ms | Allocations: 3221)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:38 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2978)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 3219)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:38 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2982)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3223)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-26 13:49:54 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3445)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 4346)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:57 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 516)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:57 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:57 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 340)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 336)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 348)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:49:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:50:08 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:50:11 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 334)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:51:34 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:57:05 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:57:05 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:57:16 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 346)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:57:49 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 350)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:57:50 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 346)
+
+
+Started POST "/authors" for ::1 at 2022-10-26 13:58:53 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"title"=>"sdaf", "text"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 350)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20221026120350)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "text" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221026120350"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/authors/new" for ::1 at 2022-10-26 14:38:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3010)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3252)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20221026120350)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221026120350"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20221027094823)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "homepage" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221027094823"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/authors/new" for ::1 at 2022-10-27 12:04:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 3652)
+Completed 200 OK in 78ms (Views: 72.6ms | ActiveRecord: 0.0ms | Allocations: 4554)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-27 12:04:43 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1174)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3625)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4526)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-27 12:04:44 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 900)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3135)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 3377)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-27 12:04:45 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3140)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 3381)
+
+
+Started POST "/authors" for ::1 at 2022-10-27 12:13:38 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 9ms (Allocations: 522)
+
+
+Started POST "/authors" for ::1 at 2022-10-27 12:52:43 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 7ms (Allocations: 346)
+
+
+Started POST "/authors" for ::1 at 2022-10-27 12:52:52 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 350)
+
+
+Started POST "/authors" for ::1 at 2022-10-27 12:52:53 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 6ms (Allocations: 348)
+
+
+Started POST "/authors" for ::1 at 2022-10-27 12:52:53 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 5ms (Allocations: 340)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 14:50:22 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 6ms (Allocations: 334)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 14:50:23 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 336)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 15:03:15 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"test", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 344)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 15:12:59 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"test", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 15:40:04 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"test", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 346)
+
+
+Started GET "/" for ::1 at 2022-10-28 16:20:21 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 307)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 2780)
+Completed 200 OK in 18ms (Views: 16.8ms | Allocations: 3689)
+
+
+Started GET "/author/new" for ::1 at 2022-10-28 16:20:25 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/authors/new" for ::1 at 2022-10-28 16:20:50 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1173)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3416)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 4146)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-28 16:20:53 +0200
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3114)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3356)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:21:02 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 520)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:28:27 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"test", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 344)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:28:43 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"test", "last_name"=>"asdf", "homepage"=>"asdf"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 352)
+
+
+Started GET "/authors/alan" for ::1 at 2022-10-28 16:31:17 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"alan"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1580)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1647)
+Completed 500 Internal Server Error in 6ms (Allocations: 1865)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <p>
+    2:   <strong>FirstName:</strong>
+    3:   <%= @author.first_name %>
+    4: </p>
+    5:  
+    6: <p>
+  
+app/views/authors/show.html.erb:3
+Started POST "/authors" for ::1 at 2022-10-28 16:33:57 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:33:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:33:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 334)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 16:33:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 346)
+
+
+Started GET "/authors/1" for ::1 at 2022-10-28 16:34:02 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1425)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1492)
+Completed 500 Internal Server Error in 3ms (Allocations: 1711)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <p>
+    2:   <strong>FirstName:</strong>
+    3:   <%= @author.first_name %>
+    4: </p>
+    5:  
+    6: <p>
+  
+app/views/authors/show.html.erb:3
+Started GET "/authors/0" for ::1 at 2022-10-28 16:34:09 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1493)
+Completed 500 Internal Server Error in 3ms (Allocations: 1711)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <p>
+    2:   <strong>FirstName:</strong>
+    3:   <%= @author.first_name %>
+    4: </p>
+    5:  
+    6: <p>
+  
+app/views/authors/show.html.erb:3
+Started POST "/authors" for ::1 at 2022-10-28 17:31:34 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 5ms (Allocations: 346)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:35 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:37 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 342)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:37 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 336)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:37 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 338)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:37 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 340)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:31:38 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+No template found for AuthorsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (Allocations: 336)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:33:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURING", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mAuthor Create (1.9ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "ALAN"], ["last_name", "TURING"], ["homepage", "SDAFASD"], ["created_at", "2022-10-28 15:33:31.451894"], ["updated_at", "2022-10-28 15:33:31.451894"]]
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 27ms (ActiveRecord: 3.6ms | Allocations: 21105)
+
+
+Started GET "/authors/1" for ::1 at 2022-10-28 17:33:31 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 360)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 25372)
+Completed 200 OK in 69ms (Views: 60.6ms | ActiveRecord: 0.2ms | Allocations: 30087)
+
+
+Started POST "/authors" for ::1 at 2022-10-28 17:33:44 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"sfadgsd", "homepage"=>"SDAFASD"}, "commit"=>"Save Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mAuthor Create (1.5ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "ALAN"], ["last_name", "sfadgsd"], ["homepage", "SDAFASD"], ["created_at", "2022-10-28 15:33:44.595160"], ["updated_at", "2022-10-28 15:33:44.595160"]]
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+Redirected to http://localhost:3000/authors/2
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms | Allocations: 2012)
+
+
+Started GET "/authors/2" for ::1 at 2022-10-28 17:33:44 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2401)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3080)
+
+
+Started GET "/authors/2" for ::1 at 2022-10-28 17:36:13 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2784)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 1.4ms | Allocations: 6848)
+
+
+Started GET "/authors/" for ::1 at 2022-10-30 13:15:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2560)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2634)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 6532)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+  
+app/views/authors/index.html.erb:11
+Started GET "/author/new" for ::1 at 2022-10-30 13:15:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/authors/new" for ::1 at 2022-10-30 13:15:44 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 6885)
+  Rendered layout layouts/application.html.erb (Duration: 81.9ms | Allocations: 31754)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms | Allocations: 32065)
+
+
+Started POST "/authors" for ::1 at 2022-10-30 13:15:47 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"", "homepage"=>""}, "commit"=>"Save Author"}
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 30ms (ActiveRecord: 0.8ms | Allocations: 17077)
+
+
+Started GET "/authors" for ::1 at 2022-10-30 13:15:48 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1490)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+  
+app/views/authors/index.html.erb:11
+Started POST "/authors" for ::1 at 2022-10-30 13:15:54 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"Turin", "homepage"=>"sdfasdf"}, "commit"=>"Save Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mAuthor Create (1.4ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "ALAN"], ["last_name", "Turin"], ["homepage", "sdfasdf"], ["created_at", "2022-10-30 12:15:54.301159"], ["updated_at", "2022-10-30 12:15:54.301159"]]
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:13:in `create'
+Redirected to http://localhost:3000/authors/3
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms | Allocations: 2654)
+
+
+Started GET "/authors/3" for ::1 at 2022-10-30 13:15:54 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2596)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 5040)
+
+
+Started GET "/authors/" for ::1 at 2022-10-30 13:16:00 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1490)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+  
+app/views/authors/index.html.erb:11
+Started GET "/authors/2" for ::1 at 2022-10-30 13:17:31 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2410)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3095)
+
+
+Started GET "/authors/1" for ::1 at 2022-10-30 13:17:34 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2396)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3072)
+
+
+Started GET "/authors" for ::1 at 2022-10-30 13:20:30 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1490)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1708)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+  
+app/views/authors/index.html.erb:11
+Started GET "/authors" for ::1 at 2022-10-30 13:21:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2560)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2634)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 6532)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+  
+app/views/authors/index.html.erb:11
+Started GET "/authors" for ::1 at 2022-10-30 13:23:24 +0100
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:4:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4537)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4605)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.2ms | Allocations: 21908)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<ActionView::Base:0x00000000010108>):
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+    15:       <td><%= link_to 'Show', author_path(author) %></td>
+    16:     </tr>
+    17:   <% end %>
+  
+app/views/authors/index.html.erb:14
+app/views/authors/index.html.erb:11
+Started GET "/authors" for ::1 at 2022-10-30 13:23:25 +0100
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:4:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4582)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4650)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 5402)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<ActionView::Base:0x00000000010478>):
+    11:   <% @authors.each do |author| %>
+    12:     <tr>
+    13:       <td><%= author.name %></td>
+    14:       <td><%= article.homepage %></td>
+    15:       <td><%= link_to 'Show', author_path(author) %></td>
+    16:     </tr>
+    17:   <% end %>
+  
+app/views/authors/index.html.erb:14
+app/views/authors/index.html.erb:11
+Started GET "/authors" for ::1 at 2022-10-30 13:24:04 +0100
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:4:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 25495)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.1ms | Allocations: 26942)
+
+
+Started GET "/authors/3" for ::1 at 2022-10-30 13:24:43 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2593)
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 7986)
+
+
+Started GET "/authors" for ::1 at 2022-10-30 13:29:24 +0100
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:4:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 845)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3445)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 4866)
+
+
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:29:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:30:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/new_author_path" for ::1 at 2022-10-30 13:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new_author_path"):
+  
+Started GET "/authors" for ::1 at 2022-10-30 13:32:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:4:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 26229)
+Completed 200 OK in 80ms (Views: 59.6ms | ActiveRecord: 1.0ms | Allocations: 47664)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-30 13:32:13 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3126)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5381)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5682)
+
+
+Started GET "/authors/new" for ::1 at 2022-10-31 15:01:02 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:01:24 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:01:24 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:01:25 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:01:25 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:21 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:21 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:22 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:22 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:22 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:22 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:22 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:42 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:42 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:42 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:43 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:44 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:45 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:46 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:02:46 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:03:26 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:03:26 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:03:27 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:03:27 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:03:27 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:02 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:02 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:02 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:03 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:03 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:03 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:03 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:03 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:04 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:04 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:04 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:42 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2172)
+
+
+  
+NameError (uninitialized constant AuthorsController::Artiicle):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:44 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2211)
+
+
+  
+NameError (uninitialized constant AuthorsController::Artiicle):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:44 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2207)
+
+
+  
+NameError (uninitialized constant AuthorsController::Artiicle):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:44 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2207)
+
+
+  
+NameError (uninitialized constant AuthorsController::Artiicle):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:50 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2221)
+
+
+  
+NameError (uninitialized constant AuthorsController::Article):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:51 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2215)
+
+
+  
+NameError (uninitialized constant AuthorsController::Article):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:04:51 +0100
+Processing by AuthorsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2213)
+
+
+  
+NameError (uninitialized constant AuthorsController::Article):
+  
+app/controllers/authors_controller.rb:13:in `new'
+Started GET "/authors/new" for ::1 at 2022-10-31 15:05:11 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1274)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3539)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.5ms | Allocations: 5995)
+
+
+Started POST "/authors" for ::1 at 2022-10-31 15:05:15 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"", "homepage"=>"asdfasdf"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3959)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5031)
+
+
+Started POST "/authors" for ::1 at 2022-10-31 15:10:31 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"", "homepage"=>"asdfasdf"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2503)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4947)
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 8759)
+
+
+Started POST "/authors" for ::1 at 2022-10-31 15:12:17 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"", "homepage"=>"asdfasdf"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2492)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4935)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 6601)
+
+
+Started POST "/authors" for ::1 at 2022-10-31 15:12:20 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"sadf", "last_name"=>"", "homepage"=>"asdfasdf"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2087)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 4334)
+Completed 200 OK in 68ms (Views: 62.6ms | ActiveRecord: 0.0ms | Allocations: 5366)
+
+
+Started GET "/authors" for ::1 at 2022-10-31 15:12:37 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3553)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.3ms | Allocations: 4492)
+
+
+Started GET "/author/new" for ::1 at 2022-10-31 15:12:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+Started GET "/authors/new" for ::1 at 2022-10-31 15:12:59 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1457)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3720)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4034)
+
+
+Started POST "/authors" for ::1 at 2022-10-31 15:13:03 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"asdfsa", "last_name"=>"", "homepage"=>"sadf"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1655)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3882)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4898)
+
+
+Started GET "/authors" for ::1 at 2022-10-31 18:39:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 41.7ms | Allocations: 16733)
+  Rendered layout layouts/application.html.erb (Duration: 100.7ms | Allocations: 41854)
+Completed 200 OK in 141ms (Views: 111.5ms | ActiveRecord: 1.6ms | Allocations: 47177)
+
+
+Started GET "/authors" for ::1 at 2022-11-01 17:22:29 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2089)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4476)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 1.3ms | Allocations: 5545)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:23:01 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2504)
+Completed 200 OK in 23ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 7914)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:27:07 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2702)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 4054)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:27:08 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2410)
+Completed 200 OK in 22ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3088)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:27:18 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2802)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4138)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:29:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 25496)
+Completed 200 OK in 85ms (Views: 61.8ms | ActiveRecord: 0.8ms | Allocations: 48514)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:33:48 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2812)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4164)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:33:49 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2395)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3086)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:33:49 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2395)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3085)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:33:49 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2398)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3073)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:33:49 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2392)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 398)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 25186)
+Completed 200 OK in 90ms (Views: 50.9ms | ActiveRecord: 0.9ms | Allocations: 48205)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:16 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2403)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3094)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:16 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2390)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3065)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:16 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2392)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:17 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2400)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3075)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:34:18 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2405)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3095)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:35:59 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2795)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 4147)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:00 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2396)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3072)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:00 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2384)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3059)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:00 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2392)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:00 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2394)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3069)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:01 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2392)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:01 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2392)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:03 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2402)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3077)
+
+
+Started GET "/authors/" for ::1 at 2022-11-01 17:36:06 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3353)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 3671)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:11 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2396)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3072)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:36:40 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 17.6ms | Allocations: 7624)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 10067)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.3ms | Allocations: 11404)
+
+
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:40:13 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 25.2ms | Allocations: 12617)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 12684)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.1ms | Allocations: 14001)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `articles_path' for #<ActionView::Base:0x0000000000c5d0>
+Did you mean?  asset_path):
+    52:     </p>
+    53:   <% end %>
+    54: 
+    55:   <%= link_to 'Back', articles_path %>
+  
+app/views/authors/edit.html.erb:55
+Started GET "/authors/1/edit" for ::1 at 2022-11-01 17:40:48 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4330)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 5665)
+
+
+Started GET "/authors/1" for ::1 at 2022-11-01 17:40:50 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1586)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3821)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4552)
+
+
+Started PATCH "/authors/1" for ::1 at 2022-11-01 17:49:35 +0100
+Processing by AuthorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"ALAN", "last_name"=>"TURONG", "homepage"=>"SDAFASD"}, "commit"=>"Update Author", "id"=>"1"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+  [1m[36mAuthor Create (1.7ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "ALAN"], ["last_name", "TURONG"], ["homepage", "SDAFASD"], ["created_at", "2022-11-01 16:49:35.070962"], ["updated_at", "2022-11-01 16:49:35.070962"]]
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+Redirected to http://localhost:3000/authors/4
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms | Allocations: 4498)
+
+
+Started GET "/authors/4" for ::1 at 2022-11-01 17:49:35 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1583)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4036)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5961)
+
+
+Started GET "/authors/4" for ::1 at 2022-11-01 17:51:14 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3462)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 7218)
+
+
+Started GET "/authors/4/edit" for ::1 at 2022-11-01 17:51:19 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1817)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 4782)
+
+
+Started PATCH "/authors/4" for ::1 at 2022-11-01 17:51:25 +0100
+Processing by AuthorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"asdfasd", "last_name"=>"Mo", "homepage"=>"SDAFASD"}, "commit"=>"Update Author", "id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:30:in `update'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1477)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'={"first_name"=>"asdfasd", "last_name"=>"Mo", "homepage"=>"SDAFASD"}):
+  
+app/controllers/authors_controller.rb:30:in `update'
+Started PATCH "/authors/4" for ::1 at 2022-11-01 17:52:23 +0100
+Processing by AuthorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"asdfasd", "last_name"=>"Mo", "homepage"=>"SDAFASD"}, "commit"=>"Update Author", "id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 3702)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/authors_controller.rb:31:in `update'
+Started PATCH "/authors/4" for ::1 at 2022-11-02 13:52:36 +0100
+Processing by AuthorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"asdfasd", "last_name"=>"Mo", "homepage"=>"SDAFASD"}, "commit"=>"Update Author", "id"=>"4"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+  [1m[36mAuthor Update (0.5ms)[0m  [1m[33mUPDATE "authors" SET "first_name" = ?, "last_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["first_name", "asdfasd"], ["last_name", "Mo"], ["updated_at", "2022-11-02 12:52:36.715387"], ["id", 4]]
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+Redirected to http://localhost:3000/authors/4
+Completed 302 Found in 36ms (ActiveRecord: 3.7ms | Allocations: 4934)
+
+
+Started GET "/authors/4" for ::1 at 2022-11-02 13:52:36 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4056)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.2ms | Allocations: 5393)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 13:52:39 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3509)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 3819)
+
+
+Started GET "/authors/4/edit" for ::1 at 2022-11-02 13:54:23 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1811)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4046)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4777)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 13:54:26 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3213)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 3468)
+
+
+Started GET "/authors/3/edit" for ::1 at 2022-11-02 13:54:28 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1318)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3545)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 4220)
+
+
+Started GET "/authors/3" for ::1 at 2022-11-02 13:54:30 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3413)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4088)
+
+
+Started GET "/authors/3" for ::1 at 2022-11-02 13:54:35 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1182)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3409)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 4084)
+
+
+Started GET "/authors/3" for ::1 at 2022-11-02 13:55:10 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3415)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 4090)
+
+
+Started GET "/authors/3" for ::1 at 2022-11-02 13:55:22 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2784)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4120)
+
+
+Started GET "/authors/3" for ::1 at 2022-11-02 13:55:23 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 2409)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 3086)
+
+
+Started GET "/authors/4/edit" for ::1 at 2022-11-02 13:55:25 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1803)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4038)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 4768)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 14:25:35 +0100
+  
+SyntaxError (/Users/simonwe/Desktop/UNI/IT-Systems-Engineering/5.Semester/SSE/rails_tut/rails-exercise-22-simon-weissmueller/app/controllers/authors_controller.rb:48: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:48: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:48: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authors_controller.rb:48: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors" for ::1 at 2022-11-02 14:25:51 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 19060)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.6ms | Allocations: 20358)
+
+
+Started DELETE "/authors/2" for ::1 at 2022-11-02 14:25:58 +0100
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mAuthor Destroy (1.8ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 10ms (ActiveRecord: 4.3ms | Allocations: 2667)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 14:25:58 +0100
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3478)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 3784)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 14:26:01 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 917)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3443)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 3698)
+
+
