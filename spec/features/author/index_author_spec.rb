@@ -1,3 +1,4 @@
+require 'rails_helper'
 
 describe "Author index page", type: :feature do
     it "should render name, homepage and link to author page" do

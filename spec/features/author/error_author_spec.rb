@@ -1,3 +1,4 @@
+require 'rails_helper'
 
 describe "New Author Page", type: :feature do
     it "should raise an error when input didn't contain a valid last name" do
