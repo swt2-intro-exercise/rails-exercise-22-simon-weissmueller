@@ -3060,3 +3060,106 @@ Processing by AuthorsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 3698)
 
 
+Started GET "/authors" for ::1 at 2022-11-02 15:19:42 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1061)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3587)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 3841)
+
+
+Started DELETE "/authors/4" for ::1 at 2022-11-02 15:19:48 +0100
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mAuthor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms | Allocations: 2113)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 15:19:48 +0100
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3300)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3559)
+
+
+Started DELETE "/authors/3" for ::1 at 2022-11-02 15:19:51 +0100
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mAuthor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms | Allocations: 2094)
+
+
+Started GET "/authors" for ::1 at 2022-11-02 15:19:51 +0100
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 648)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3170)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 3429)
+
+
+Started GET "/authors" for ::1 at 2022-11-05 18:38:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 16763)
+  Rendered layout layouts/application.html.erb (Duration: 180.2ms | Allocations: 61145)
+Completed 200 OK in 205ms (Views: 186.1ms | ActiveRecord: 1.6ms | Allocations: 66466)
+
+
+Started GET "/" for ::1 at 2022-11-05 18:38:43 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 316)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2697)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 3430)
+
+
+Started GET "/authors" for ::1 at 2022-11-05 18:38:51 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:11
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3191)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 3454)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePapers (20221105174430)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "papers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "venue" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221105174430"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

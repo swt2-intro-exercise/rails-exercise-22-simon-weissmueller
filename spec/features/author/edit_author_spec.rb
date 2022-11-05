@@ -1,3 +1,4 @@
+require 'rails_helper'
 
 describe "Edit Author page", type: :feature do
     before(:each) do
