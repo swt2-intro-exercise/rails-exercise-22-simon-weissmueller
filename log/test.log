@@ -19117,3 +19117,471 @@ Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 498)
   Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 18)
   Rendered papers/show.html.erb (Duration: 0.6ms | Allocations: 274)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.385170"], ["updated_at", "2022-11-05 18:57:20.385170"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 37351)
+Completed 200 OK in 69ms (Views: 62.1ms | ActiveRecord: 0.1ms | Allocations: 42220)
+  [1m[36mAuthor Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+Started DELETE "/authors/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/authors
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 593)
+Started GET "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1606)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1830)
+  [1m[36mAuthor Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.601021"], ["updated_at", "2022-11-05 18:57:20.601021"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors/1/edit" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3600)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5102)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 5470)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.615812"], ["updated_at", "2022-11-05 18:57:20.615812"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors/1/edit" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1068)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2562)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2876)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.628666"], ["updated_at", "2022-11-05 18:57:20.628666"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors/1/edit" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1068)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2562)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2875)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.641741"], ["updated_at", "2022-11-05 18:57:20.641741"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors/1/edit" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1068)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2562)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 2875)
+Started PATCH "/authors/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"first_name"=>"Edsger", "last_name"=>"Dijkstra", "homepage"=>"https://en.wikipedia.org/wiki/Edsger_W._Dijkstra"}, "commit"=>"Update Author", "id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Update (0.2ms)[0m  [1m[33mUPDATE "authors" SET "first_name" = ?, "last_name" = ?, "homepage" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["first_name", "Edsger"], ["last_name", "Dijkstra"], ["homepage", "https://en.wikipedia.org/wiki/Edsger_W._Dijkstra"], ["updated_at", "2022-11-05 18:57:20.657534"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/authors/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 729)
+Started GET "/authors/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1690)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2058)
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/authors/new" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1347)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2857)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3138)
+Started POST "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"author"=>{"first_name"=>"Edsger", "last_name"=>"", "homepage"=>"https://en.wikipedia.org/wiki/Edsger_W._Dijkstra"}, "commit"=>"Save Author"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2062)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3556)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 4044)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1605)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1828)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.696030"], ["updated_at", "2022-11-05 18:57:20.696030"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1743)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1966)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/authors/new" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2425)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2650)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/authors/new" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2425)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2650)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/authors/new" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2425)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2650)
+Started POST "/authors" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#create as HTML
+  Parameters: {"author"=>{"first_name"=>"Edsger", "last_name"=>"Dijkstra", "homepage"=>"https://en.wikipedia.org/wiki/Edsger_W._Dijkstra"}, "commit"=>"Save Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Edsger"], ["last_name", "Dijkstra"], ["homepage", "https://en.wikipedia.org/wiki/Edsger_W._Dijkstra"], ["created_at", "2022-11-05 18:57:20.735877"], ["updated_at", "2022-11-05 18:57:20.735877"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/authors/1
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 538)
+Started GET "/authors/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1506)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1819)
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."last_name" = ? LIMIT ?[0m  [["last_name", "Dijkstra"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "homepage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alan"], ["last_name", "Turing"], ["homepage", "http://wikipedia.org/Alan_Turing"], ["created_at", "2022-11-05 18:57:20.745027"], ["updated_at", "2022-11-05 18:57:20.745027"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/authors/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1506)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1819)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1758)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2460)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.3ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.779875"], ["updated_at", "2022-11-05 18:57:20.779875"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/_paper.html.erb (Duration: 0.6ms | Allocations: 217)
+  Rendered papers/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1018)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2529)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 3314)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.805936"], ["updated_at", "2022-11-05 18:57:20.805936"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.5ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.809863"], ["updated_at", "2022-11-05 18:57:20.809863"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.815316"], ["updated_at", "2022-11-05 18:57:20.815316"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered papers/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 305)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1808)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 2032)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.825673"], ["updated_at", "2022-11-05 18:57:20.825673"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered papers/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2039)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2533)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/papers/new" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 2.8ms | Allocations: 1629)
+  Rendered papers/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1893)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3403)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3684)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.845563"], ["updated_at", "2022-11-05 18:57:20.845563"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/papers/1/edit" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 1.5ms | Allocations: 1101)
+  Rendered papers/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1361)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2863)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3233)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPaper Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+Started POST "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#create as HTML
+  Parameters: {"paper"=>{"title"=>"Title", "venue"=>"Venue", "year"=>"2000"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.859731"], ["updated_at", "2022-11-05 18:57:20.859731"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 655)
+  [1m[36mPaper Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#create as HTML
+  Parameters: {"paper"=>{"title"=>"Title", "venue"=>"Venue", "year"=>"2000"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.866495"], ["updated_at", "2022-11-05 18:57:20.866495"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 627)
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" ORDER BY "papers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPaper Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+Started POST "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#create as HTML
+  Parameters: {"paper"=>{"title"=>"", "venue"=>"Venue", "year"=>"Year"}}
+  Rendering layout layouts/application.html.erb
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 10.2ms | Allocations: 3198)
+  Rendered papers/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3258)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4769)
+Completed 422 Unprocessable Entity in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5284)
+  [1m[36mPaper Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/papers" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#create as HTML
+  Parameters: {"paper"=>{"title"=>"", "venue"=>"Venue", "year"=>"Year"}}
+  Rendering layout layouts/application.html.erb
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 3.5ms | Allocations: 3101)
+  Rendered papers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3161)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4655)
+Completed 422 Unprocessable Entity in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 5161)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.899575"], ["updated_at", "2022-11-05 18:57:20.899575"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#update as HTML
+  Parameters: {"paper"=>{"title"=>"NewTitle", "venue"=>"NewVenue", "year"=>"2001"}, "id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Update (0.1ms)[0m  [1m[33mUPDATE "papers" SET "title" = ?, "venue" = ?, "year" = ?, "updated_at" = ? WHERE "papers"."id" = ?[0m  [["title", "NewTitle"], ["venue", "NewVenue"], ["year", 2001], ["updated_at", "2022-11-05 18:57:20.903392"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 755)
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.908981"], ["updated_at", "2022-11-05 18:57:20.908981"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#update as HTML
+  Parameters: {"paper"=>{"title"=>"NewTitle", "venue"=>"NewVenue", "year"=>"2001"}, "id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Update (0.1ms)[0m  [1m[33mUPDATE "papers" SET "title" = ?, "venue" = ?, "year" = ?, "updated_at" = ? WHERE "papers"."id" = ?[0m  [["title", "NewTitle"], ["venue", "NewVenue"], ["year", 2001], ["updated_at", "2022-11-05 18:57:20.913184"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 753)
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.3ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.918695"], ["updated_at", "2022-11-05 18:57:20.918695"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#update as HTML
+  Parameters: {"paper"=>{"title"=>"", "venue"=>"Venue", "year"=>"Year"}, "id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering papers/edit.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 5.5ms | Allocations: 3157)
+  Rendered papers/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3252)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4746)
+Completed 422 Unprocessable Entity in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 5335)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.5ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.934029"], ["updated_at", "2022-11-05 18:57:20.934029"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPaper Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+Started DELETE "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Destroy (0.1ms)[0m  [1m[31mDELETE FROM "papers" WHERE "papers"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 499)
+  [1m[36mPaper Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "papers"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.5ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2000], ["created_at", "2022-11-05 18:57:20.943789"], ["updated_at", "2022-11-05 18:57:20.943789"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/papers/1" for 127.0.0.1 at 2022-11-05 19:57:20 +0100
+Processing by PapersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Destroy (0.1ms)[0m  [1m[31mDELETE FROM "papers" WHERE "papers"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/papers
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 498)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.5ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["venue", "MyString"], ["year", 1], ["created_at", "2022-11-05 18:57:20.965146"], ["updated_at", "2022-11-05 18:57:20.965146"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering papers/edit.html.erb
+  Rendered papers/_form.html.erb (Duration: 1.6ms | Allocations: 1082)
+  Rendered papers/edit.html.erb (Duration: 2.7ms | Allocations: 1307)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2], ["created_at", "2022-11-05 18:57:20.975593"], ["updated_at", "2022-11-05 18:57:20.975593"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.2ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2], ["created_at", "2022-11-05 18:57:20.976978"], ["updated_at", "2022-11-05 18:57:20.976978"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering papers/index.html.erb
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered papers/_paper.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered papers/index.html.erb (Duration: 0.8ms | Allocations: 253)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering papers/new.html.erb
+  Rendered papers/_form.html.erb (Duration: 1.8ms | Allocations: 1025)
+  Rendered papers/new.html.erb (Duration: 2.1ms | Allocations: 1105)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPaper Create (0.4ms)[0m  [1m[32mINSERT INTO "papers" ("title", "venue", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title"], ["venue", "Venue"], ["year", 2], ["created_at", "2022-11-05 18:57:20.991593"], ["updated_at", "2022-11-05 18:57:20.991593"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering papers/show.html.erb
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered papers/show.html.erb (Duration: 0.7ms | Allocations: 274)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
