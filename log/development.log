@@ -3373,3 +3373,181 @@ Migrating to CreateJoinTableAuthorPaper (20221107101908)
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/papers/1" for ::1 at 2022-11-07 15:45:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/papers_controller.rb:51:in `set_paper'
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.8ms | Allocations: 215)
+  Rendered papers/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4602)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 4669)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.7ms | Allocations: 14852)
+
+
+  
+ActionView::Template::Error (undefined method `author' for #<Paper:0x00007f7825f45e08>
+Did you mean?  authors
+               authors=):
+    2: 
+    3: <%= render @paper %>
+    4: <p>Author:</p>
+    5: <%= render @paper.author %>
+    6: 
+    7: <div>
+    8:   <%= link_to "Edit this paper", edit_paper_path(@paper) %> |
+  
+app/views/papers/show.html.erb:5
+Started GET "/papers/1" for ::1 at 2022-11-07 15:45:33 +0100
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/papers_controller.rb:51:in `set_paper'
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.8ms | Allocations: 212)
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_papers" ON "authors"."id" = "authors_papers"."author_id" WHERE "authors_papers"."paper_id" = ?[0m  [["paper_id", 1]]
+  ↳ app/views/papers/show.html.erb:5
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 14)
+  Rendered papers/show.html.erb within layouts/application (Duration: 28.8ms | Allocations: 17215)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 33288)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 2.1ms | Allocations: 34628)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:45:39 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1642)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4022)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 4334)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:46:48 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3694)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3950)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:46:49 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1330)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3700)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 3954)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:46:49 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1318)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3688)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 3942)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:46:49 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3706)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 3960)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:46:49 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3702)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 3956)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:47:27 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 0.8ms | Allocations: 212)
+  Rendered papers/_paper.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1847)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4433)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms | Allocations: 5348)
+
+
+Started GET "/papers/1" for ::1 at 2022-11-07 15:47:28 +0100
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/papers_controller.rb:51:in `set_paper'
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered papers/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 806)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3177)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 3915)
+
+
+Started GET "/papers" for ::1 at 2022-11-07 15:49:33 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 2.1ms | Allocations: 212)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4434)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 5351)
+
+
+Started GET "/papers/new" for ::1 at 2022-11-07 15:49:34 +0100
+Processing by PapersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/new.html.erb within layouts/application
+  Rendered papers/_form.html.erb (Duration: 4.7ms | Allocations: 1642)
+  Rendered papers/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1926)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4303)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4617)
+
+
