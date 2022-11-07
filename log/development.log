@@ -3551,3 +3551,47 @@ Processing by PapersController#new as HTML
 Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4617)
 
 
+Started GET "/papers" for ::1 at 2022-11-07 16:43:43 +0100
+Processing by PapersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering papers/index.html.erb within layouts/application
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+  ↳ app/views/papers/index.html.erb:6
+  Rendered papers/_paper.html.erb (Duration: 1.2ms | Allocations: 212)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered papers/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1979)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4565)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.8ms | Allocations: 5482)
+
+
+Started GET "/papers/2" for ::1 at 2022-11-07 16:43:45 +0100
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/papers_controller.rb:51:in `set_paper'
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.1ms | Allocations: 21)
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_papers" ON "authors"."id" = "authors_papers"."author_id" WHERE "authors_papers"."paper_id" = ?[0m  [["paper_id", 2]]
+  ↳ app/views/papers/show.html.erb:5
+  Rendered papers/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1618)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3987)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 1.2ms | Allocations: 4753)
+
+
+Started GET "/papers/2" for ::1 at 2022-11-07 16:44:03 +0100
+Processing by PapersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaper Load (0.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/papers_controller.rb:51:in `set_paper'
+  Rendering layout layouts/application.html.erb
+  Rendering papers/show.html.erb within layouts/application
+  Rendered papers/_paper.html.erb (Duration: 0.7ms | Allocations: 212)
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_papers" ON "authors"."id" = "authors_papers"."author_id" WHERE "authors_papers"."paper_id" = ?[0m  [["paper_id", 2]]
+  ↳ app/views/papers/show.html.erb:5
+  Rendered papers/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4418)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 5758)
+
+
