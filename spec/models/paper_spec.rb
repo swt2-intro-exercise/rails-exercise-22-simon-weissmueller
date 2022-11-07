@@ -17,4 +17,9 @@ RSpec.describe Paper, type: :model do
     @paper = Paper.new(title: 'Title',venue: 'Venue',year: 'Year2000')
     expect(@paper.save()).to eq(false)
   end
+  it "have a list of authors as a n:m relation" do
+    @paper = Paper.new(title: 'Title',venue: 'Venue',year: '2000')
+    @paper.save
+    expect(@paper.authors).to eq([])
+  end
 end
